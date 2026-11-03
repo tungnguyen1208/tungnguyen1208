@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 460" role="img" aria-labelledby="t d">
+<title id="t">Developer at work — animated coding illustration</title>
+<desc id="d">A developer wearing green headphones works at two monitors on a pale blueprint background. A cursor moves, code lines blink, and a code badge pulses.</desc>
+<defs>
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20 0H0V20" fill="none" stroke="#dbeafe" stroke-width="1"/>
+  </pattern>
+  <linearGradient id="screen" x2="0" y2="1">
+    <stop stop-color="#f8fbff"/><stop offset="1" stop-color="#dbeafe"/>
+  </linearGradient>
+  <linearGradient id="shirt" x2="0" y2="1">
+    <stop stop-color="#a7f3d0"/><stop offset="1" stop-color="#5eead4"/>
+  </linearGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="900" height="460" rx="16" fill="#f8fbff"/>
+<rect width="900" height="460" rx="16" fill="url(#grid)"/>
+<g stroke="#8b8be8" stroke-width="2" fill="none" opacity=".9">
+  <path d="M70 70h125m-125 12h70m560-20h95m-95 12h55M85 385h190m470 0h100"/>
+  <path d="M110 95l-8 -8m8 8l-8 8M790 94l8 -8m-8 8l8 8"/>
+  <path d="M145 45h38m-19 -10v20M735 50h38m-19 -10v20"/>
+</g>
+<g fill="#8b8be8">
+  <circle cx="70" cy="70" r="4"/><circle cx="830" cy="62" r="4"/><circle cx="790" cy="385" r="4"/>
+</g>
+<!-- floating code badge -->
+<g transform="translate(738 72)">
+  <circle r="55" fill="#fff" stroke="#a78bfa" stroke-width="3"/>
+  <circle r="46" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="85 18" opacity=".8">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="-25" y="-32" width="50" height="64" rx="5" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+  <path d="M-15 -19h30M-15 -10h24" stroke="#a78bfa" stroke-width="3"/>
+  <text x="0" y="13" fill="#5b21b6" font-family="monospace" font-size="22" font-weight="700" text-anchor="middle">&lt;/&gt;</text>
+  <circle r="60" fill="none" stroke="#60a5fa" stroke-width="2" opacity=".45" filter="url(#glow)">
+    <animate attributeName="r" values="56;68;56" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".2;.8;.2" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+</g>
+<!-- desk and monitors -->
+<path d="M105 345H795l-18 16H123z" fill="#dbeafe" stroke="#64748b" stroke-width="3"/>
+<rect x="135" y="150" width="275" height="175" rx="12" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+<rect x="147" y="162" width="251" height="151" rx="5" fill="url(#screen)"/>
+<rect x="147" y="162" width="251" height="23" rx="5" fill="#c4b5fd"/>
+<circle cx="162" cy="173" r="4" fill="#fb7185"/><circle cx="176" cy="173" r="4" fill="#fbbf24"/><circle cx="190" cy="173" r="4" fill="#34d399"/>
+<rect x="163" y="200" width="78" height="94" rx="4" fill="#93c5fd"/>
+<rect x="250" y="200" width="65" height="45" rx="4" fill="#fdba74"/>
+<rect x="250" y="253" width="65" height="41" rx="4" fill="#a7f3d0"/>
+<rect x="324" y="200" width="57" height="94" rx="4" fill="#c4b5fd"/>
+<path d="M260 215h40M260 225h29M260 264h40M260 275h28" stroke="#64748b" stroke-width="3"/>
+<rect x="485" y="145" width="285" height="180" rx="12" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+<rect x="498" y="158" width="259" height="154" rx="5" fill="#111827"/>
+<rect x="498" y="158" width="259" height="22" rx="5" fill="#475569"/>
+<circle cx="512" cy="169" r="4" fill="#fb7185"/><circle cx="526" cy="169" r="4" fill="#fbbf24"/><circle cx="540" cy="169" r="4" fill="#34d399"/>
+<g stroke-width="4" stroke-linecap="round">
+  <path d="M519 198h60" stroke="#60a5fa"/><path d="M532 214h105" stroke="#a78bfa"/><path d="M532 230h82" stroke="#34d399"/>
+  <path d="M519 248h122" stroke="#f472b6"/><path d="M532 264h90" stroke="#60a5fa"/><path d="M532 280h110" stroke="#fbbf24"/>
+  <path d="M650 198h72M650 214h55M650 230h78M650 248h65M650 264h80M650 280h60" stroke="#64748b"/>
+</g>
+<rect x="245" y="325" width="55" height="24" rx="3" fill="#64748b"/><path d="M218 350h110" stroke="#64748b" stroke-width="7" stroke-linecap="round"/>
+<rect x="590" y="325" width="55" height="24" rx="3" fill="#64748b"/><path d="M560 350h115" stroke="#64748b" stroke-width="7" stroke-linecap="round"/>
+<!-- character torso and chair -->
+<path d="M330 460Q340 370 410 350H510Q580 370 590 460Z" fill="url(#shirt)" stroke="#475569" stroke-width="4"/>
+<path d="M395 460Q397 395 430 385H490Q523 395 525 460" fill="#e2e8f0" stroke="#64748b" stroke-width="4"/>
+<path d="M365 385Q325 400 300 438M555 385Q595 400 620 438" fill="none" stroke="#f1c7a5" stroke-width="25" stroke-linecap="round"/>
+<path d="M365 385Q325 400 300 438M555 385Q595 400 620 438" fill="none" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+<!-- hands gently typing -->
+<g>
+  <ellipse cx="300" cy="438" rx="15" ry="9" fill="#f1c7a5"><animate attributeName="cy" values="438;432;438" dur="1.2s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="620" cy="438" rx="15" ry="9" fill="#f1c7a5"><animate attributeName="cy" values="438;432;438" dur="1.2s" begin=".6s" repeatCount="indefinite"/></ellipse>
+</g>
+<!-- head, hair and headphones -->
+<path d="M416 165Q415 110 450 103Q493 102 505 146L498 205Q480 235 450 231Q420 220 408 190Z" fill="#c99663" stroke="#334155" stroke-width="4"/>
+<path d="M408 165Q394 110 439 92Q485 77 511 126L506 155Q491 133 480 129Q450 151 414 143Z" fill="#4b403c" stroke="#1f2937" stroke-width="4"/>
+<path d="M401 151Q390 102 449 82Q515 82 522 151" fill="none" stroke="#16a34a" stroke-width="13" stroke-linecap="round"/>
+<rect x="390" y="144" width="25" height="62" rx="12" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+<rect x="508" y="144" width="25" height="62" rx="12" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+<rect x="396" y="154" width="13" height="42" rx="6" fill="#4ade80"/><rect x="514" y="154" width="13" height="42" rx="6" fill="#4ade80"/>
+<path d="M430 230Q450 241 472 230" fill="none" stroke="#9a6b48" stroke-width="3"/>
+<!-- moving mouse cursor -->
+<g>
+  <path d="M0 0L0 27L8 20L14 33L20 30L14 17L25 16Z" fill="#fff" stroke="#0f172a" stroke-width="2" filter="url(#glow)">
+    <animateMotion dur="5s" repeatCount="indefinite" path="M205 205 C245 215 280 230 290 270 S335 285 355 240 S245 205 205 205"/>
+  </path>
+</g>
+<!-- code caret blink -->
+<rect x="720" y="276" width="3" height="14" fill="#38bdf8">
+  <animate attributeName="opacity" values="1;0;1" dur=".9s" repeatCount="indefinite"/>
+</rect>
+</svg>
