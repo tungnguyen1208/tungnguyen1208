@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 310" width="100%">
+  <defs>
+    <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E2E8F0" stroke-width="0.7" />
+    </pattern>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#smallGrid)" />
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#CBD5E1" stroke-width="1.2" />
+    </pattern>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#EFF6FF" />
+    </linearGradient>
+    <style>
+      .cat { font-family: 'Courier New', monospace; font-size: 11px; font-weight: 700; fill: #334155; letter-spacing: 0.5px; }
+      .tag-box { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1; rx: 4; }
+      .tag-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 500; fill: #1E293B; text-anchor: middle; }
+      .node-line { stroke: #94A3B8; stroke-width: 1.2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Nền & Lưới -->
+  <rect width="850" height="310" rx="10" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="1.5" />
+  <rect width="850" height="310" rx="10" fill="url(#grid)" />
+
+  <!-- 4 Góc kỹ thuật -->
+  <path d="M 15 25 L 15 15 L 25 15" fill="none" stroke="#64748B" stroke-width="1.5" />
+  <path d="M 835 25 L 835 15 L 825 15" fill="none" stroke="#64748B" stroke-width="1.5" />
+  <path d="M 15 285 L 15 295 L 25 295" fill="none" stroke="#64748B" stroke-width="1.5" />
+  <path d="M 835 285 L 835 295 L 825 295" fill="none" stroke="#64748B" stroke-width="1.5" />
+
+  <!-- Đường trục dọc bên trái -->
+  <line x1="45" y1="38" x2="45" y2="272" class="node-line" />
+  <line x1="175" y1="20" x2="175" y2="290" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- ROW 1: BACKEND -->
+  <line x1="45" y1="38" x2="68" y2="38" class="node-line" />
+  <circle cx="45" cy="38" r="3" fill="#64748B" />
+  <circle cx="72" cy="38" r="4" fill="#0284C7" />
+  <text x="86" y="42" class="cat">BACKEND</text>
+  
+  <rect x="195" y="26" width="55" height="24" class="tag-box" /><text x="222.5" y="42" class="tag-text">C#</text>
+  <rect x="260" y="26" width="80" height="24" class="tag-box" /><text x="300" y="42" class="tag-text">.NET Core</text>
+  <rect x="350" y="26" width="65" height="24" class="tag-box" /><text x="382.5" y="42" class="tag-text">Python</text>
+  <rect x="425" y="26" width="70" height="24" class="tag-box" /><text x="460" y="42" class="tag-text">FastAPI</text>
+  <rect x="505" y="26" width="75" height="24" class="tag-box" /><text x="542.5" y="42" class="tag-text">REST API</text>
+
+  <!-- ROW 2: AI / ML -->
+  <line x1="45" y1="77" x2="68" y2="77" class="node-line" />
+  <circle cx="45" cy="77" r="3" fill="#64748B" />
+  <circle cx="72" cy="77" r="4" fill="#0284C7" />
+  <text x="86" y="81" class="cat">AI / ML</text>
+
+  <rect x="195" y="65" width="95" height="24" class="tag-box" /><text x="242.5" y="81" class="tag-text">RAG Systems</text>
+  <rect x="300" y="65" width="85" height="24" class="tag-box" /><text x="342.5" y="81" class="tag-text">Gemini API</text>
+  <rect x="395" y="65" width="90" height="24" class="tag-box" /><text x="440" y="81" class="tag-text">scikit-learn</text>
+  <rect x="495" y="65" width="70" height="24" class="tag-box" /><text x="530" y="81" class="tag-text">Whisper</text>
+  <rect x="575" y="65" width="70" height="24" class="tag-box" /><text x="610" y="81" class="tag-text">FFmpeg</text>
+
+  <!-- ROW 3: FRONTEND -->
+  <line x1="45" y1="116" x2="68" y2="116" class="node-line" />
+  <circle cx="45" cy="116" r="3" fill="#64748B" />
+  <circle cx="72" cy="116" r="4" fill="#0284C7" />
+  <text x="86" y="120" class="cat">FRONTEND</text>
+
+  <rect x="195" y="104" width="80" height="24" class="tag-box" /><text x="235" y="120" class="tag-text">JavaScript</text>
+  <rect x="285" y="104" width="75" height="24" class="tag-box" /><text x="322.5" y="120" class="tag-text">Three.js</text>
+  <rect x="370" y="104" width="85" height="24" class="tag-box" /><text x="412.5" y="120" class="tag-text">HTML / CSS</text>
+  <rect x="465" y="104" width="95" height="24" class="tag-box" /><text x="512.5" y="120" class="tag-text">ASP.NET MVC</text>
+
+  <!-- ROW 4: DATA -->
+  <line x1="45" y1="155" x2="68" y2="155" class="node-line" />
+  <circle cx="45" cy="155" r="3" fill="#64748B" />
+  <circle cx="72" cy="155" r="4" fill="#0284C7" />
+  <text x="86" y="159" class="cat">DATA</text>
+
+  <rect x="195" y="143" width="85" height="24" class="tag-box" /><text x="237.5" y="159" class="tag-text">SQL Server</text>
+  <rect x="290" y="143" width="85" height="24" class="tag-box" /><text x="332.5" y="159" class="tag-text">PostgreSQL</text>
+  <rect x="385" y="143" width="75" height="24" class="tag-box" /><text x="422.5" y="159" class="tag-text">Supabase</text>
+  <rect x="470" y="143" width="60" height="24" class="tag-box" /><text x="500" y="159" class="tag-text">MySQL</text>
+
+  <!-- ROW 5: DEVOPS & OS -->
+  <line x1="45" y1="194" x2="68" y2="194" class="node-line" />
+  <circle cx="45" cy="194" r="3" fill="#64748B" />
+  <circle cx="72" cy="194" r="4" fill="#0284C7" />
+  <text x="86" y="198" class="cat">DEVOPS</text>
+
+  <rect x="195" y="182" width="55" height="24" class="tag-box" /><text x="222.5" y="198" class="tag-text">Git</text>
+  <rect x="260" y="182" width="90" height="24" class="tag-box" /><text x="305" y="198" class="tag-text">Linux / WSL</text>
+  <rect x="360" y="182" width="65" height="24" class="tag-box" /><text x="392.5" y="198" class="tag-text">Docker</text>
+  <rect x="435" y="182" width="65" height="24" class="tag-box" /><text x="467.5" y="198" class="tag-text">Vercel</text>
+  <rect x="510" y="182" width="80" height="24" class="tag-box" /><text x="550" y="198" class="tag-text">Playwright</text>
+
+  <!-- ROW 6: NETWORK & SEC -->
+  <line x1="45" y1="233" x2="68" y2="233" class="node-line" />
+  <circle cx="45" cy="233" r="3" fill="#64748B" />
+  <circle cx="72" cy="233" r="4" fill="#0284C7" />
+  <text x="86" y="237" class="cat">SECURITY</text>
+
+  <rect x="195" y="221" width="80" height="24" class="tag-box" /><text x="235" y="237" class="tag-text">Wireshark</text>
+  <rect x="285" y="221" width="75" height="24" class="tag-box" /><text x="322.5" y="237" class="tag-text">tcpdump</text>
+  <rect x="370" y="221" width="115" height="24" class="tag-box" /><text x="427.5" y="237" class="tag-text">Network Analysis</text>
+
+  <!-- ROW 7: ENGINEERING -->
+  <line x1="45" y1="272" x2="68" y2="272" class="node-line" />
+  <circle cx="45" cy="272" r="3" fill="#64748B" />
+  <circle cx="72" cy="272" r="4" fill="#0284C7" />
+  <text x="86" y="276" class="cat">ENGINEERING</text>
+
+  <rect x="195" y="260" width="95" height="24" class="tag-box" /><text x="242.5" y="276" class="tag-text">System Design</text>
+  <rect x="300" y="260" width="105" height="24" class="tag-box" /><text x="352.5" y="276" class="tag-text">API Architecture</text>
+  <rect x="415" y="260" width="85" height="24" class="tag-box" /><text x="457.5" y="276" class="tag-text">Automation</text>
+</svg>
