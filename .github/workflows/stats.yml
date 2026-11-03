@@ -1,0 +1,67 @@
+name: profile assets
+
+# Regenerates the counter and card SVGs straight from the GitHub API and commits
+# them back. Nothing on the profile depends on a third-party stat service.
+
+on:
+  schedule:
+    # Every 10 minutes, offset off the hour. An SVG served to a README cannot
+    # fetch anything at view time, so the follower count is only ever as fresh as
+    # the last build - this is the tightest honest loop GitHub allows. The offset
+    # matters: schedules landing on :00 queue behind the platform-wide rush and
+    # are the ones GitHub drops first under load.
+    - cron: '3-59/10 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/**
+      - .github/workflows/stats.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Regenerate SVGs from the GitHub API
+        run: node scripts/build-assets.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check whether the figures moved
+        id: diff
+        run: |
+          if git diff --quiet -- assets; then
+            echo 'figures unchanged'
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Bump the README's asset cache-buster
+        if: steps.diff.outputs.changed == 'true'
+        # Matches any assets/<name>-<theme>.svg rather than a hand-listed set,
+        # so a newly added card or badge is cache-busted without anyone
+        # remembering to extend this line.
+        run: sed -i -E "s#(assets/[a-z-]+-(dark|light)\.svg)(\?v=[0-9]+)?#\1?v=$(date +%s)#g" README.md
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets README.md
+          git commit -m 'chore: refresh profile stat assets'
+          git push
