@@ -40,7 +40,7 @@
 
 <div align="center">
   <img
-    src="./assets/coder-animation.gif"
+    src="./assets/coder-animation.svg"
     alt="Animated illustration of a developer coding at dual monitors"
     width="82%"
   />
